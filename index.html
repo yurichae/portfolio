@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>CHAE YU RI : Web developer</title>
+        <link rel="shortcut icon" href="images/yr-logo-black.png" />
+        <link rel="stylesheet" href="css/style.min.css" />
+        <link rel="stylesheet" href="css/main-ele.css" />
+        <link rel="stylesheet" href="css/pagescroll.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <style>
+            .wrap {
+                min-width: 1200px;
+            }
+            @font-face {
+                font-family: "Archivo Black";
+                font-style: normal;
+                font-weight: 400;
+                src: url(https://fonts.gstatic.com/s/archivoblack/v10/HTxqL289NzCGg4MzN6KJ7eW6CYyF-w.ttf) format("truetype");
+            }
+            .glitch-wrapper {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Archivo Black", sans-serif;
+            }
+            .glitch {
+                color: #fff;
+                font-size: 150px;
+                text-transform: upercase;
+                position: relative;
+                display: inline-block;
+            }
+            .glitch::before,
+            .glitch::after {
+                content: "CHAE YU RI";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: black;
+            }
+            .glitch::before {
+                left: 2px;
+                text-shadow: -2px 0 #49fc00;
+                clip: rect(24px, 550px, 90px, 0);
+                animation: glitch-anim-2 3s infinite linear alternate-reverse;
+            }
+            .glitch::after {
+                left: -2px;
+                text-shadow: -2px 0 #b300fc;
+                clip: rect(85px, 550px, 140px, 0);
+                animation: glitch-anim 2.5s infinite linear alternate-reverse;
+            }
+            .glitch.invert {
+                color: #000;
+            }
+            .glitch.invert::before,
+            .glitch.invert::after {
+                background: #fff;
+            }
+            .wrapper .page.page1.invert {
+                background-color: #fff !important;
+            }
+            .wrapper .page.page1.invert .scroll_ani span {
+                border-color: #000;
+            }
+            @-webkit-keyframes glitch-anim {
+                0% {
+                    clip: rect(36px, 9999px, 137px, 0);
+                }
+                4.166666666666666% {
+                    clip: rect(20px, 9999px, 106px, 0);
+                }
+                8.333333333333332% {
+                    clip: rect(89px, 9999px, 93px, 0);
+                }
+                12.5% {
+                    clip: rect(144px, 9999px, 13px, 0);
+                }
+                16.666666666666664% {
+                    clip: rect(50px, 9999px, 11px, 0);
+                }
+                20.833333333333336% {
+                    clip: rect(111px, 9999px, 124px, 0);
+                }
+                25% {
+                    clip: rect(104px, 9999px, 8px, 0);
+                }
+                29.166666666666668% {
+                    clip: rect(14px, 9999px, 37px, 0);
+                }
+                33.33333333333333% {
+                    clip: rect(117px, 9999px, 90px, 0);
+                }
+                37.5% {
+                    clip: rect(28px, 9999px, 63px, 0);
+                }
+                41.66666666666667% {
+                    clip: rect(129px, 9999px, 118px, 0);
+                }
+                45.83333333333333% {
+                    clip: rect(69px, 9999px, 111px, 0);
+                }
+                50% {
+                    clip: rect(87px, 9999px, 56px, 0);
+                }
+                54.166666666666664% {
+                    clip: rect(98px, 9999px, 99px, 0);
+                }
+                58.333333333333336% {
+                    clip: rect(60px, 9999px, 58px, 0);
+                }
+                62.5% {
+                    clip: rect(115px, 9999px, 92px, 0);
+                }
+                66.66666666666666% {
+                    clip: rect(85px, 9999px, 102px, 0);
+                }
+                70.83333333333334% {
+                    clip: rect(84px, 9999px, 107px, 0);
+                }
+                75% {
+                    clip: rect(25px, 9999px, 69px, 0);
+                }
+                79.16666666666666% {
+                    clip: rect(28px, 9999px, 104px, 0);
+                }
+                83.33333333333334% {
+                    clip: rect(33px, 9999px, 38px, 0);
+                }
+                87.5% {
+                    clip: rect(124px, 9999px, 24px, 0);
+                }
+                91.66666666666666% {
+                    clip: rect(103px, 9999px, 64px, 0);
+                }
+                95.83333333333334% {
+                    clip: rect(62px, 9999px, 80px, 0);
+                }
+                100% {
+                    clip: rect(13px, 9999px, 30px, 0);
+                }
+            }
+            @keyframes glitch-anim {
+                0% {
+                    clip: rect(36px, 9999px, 137px, 0);
+                }
+                4.166666666666666% {
+                    clip: rect(20px, 9999px, 106px, 0);
+                }
+                8.333333333333332% {
+                    clip: rect(89px, 9999px, 93px, 0);
+                }
+                12.5% {
+                    clip: rect(144px, 9999px, 13px, 0);
+                }
+                16.666666666666664% {
+                    clip: rect(50px, 9999px, 11px, 0);
+                }
+                20.833333333333336% {
+                    clip: rect(111px, 9999px, 124px, 0);
+                }
+                25% {
+                    clip: rect(104px, 9999px, 8px, 0);
+                }
+                29.166666666666668% {
+                    clip: rect(14px, 9999px, 37px, 0);
+                }
+                33.33333333333333% {
+                    clip: rect(117px, 9999px, 90px, 0);
+                }
+                37.5% {
+                    clip: rect(28px, 9999px, 63px, 0);
+                }
+                41.66666666666667% {
+                    clip: rect(129px, 9999px, 118px, 0);
+                }
+                45.83333333333333% {
+                    clip: rect(69px, 9999px, 111px, 0);
+                }
+                50% {
+                    clip: rect(87px, 9999px, 56px, 0);
+                }
+                54.166666666666664% {
+                    clip: rect(98px, 9999px, 99px, 0);
+                }
+                58.333333333333336% {
+                    clip: rect(60px, 9999px, 58px, 0);
+                }
+                62.5% {
+                    clip: rect(115px, 9999px, 92px, 0);
+                }
+                66.66666666666666% {
+                    clip: rect(85px, 9999px, 102px, 0);
+                }
+                70.83333333333334% {
+                    clip: rect(84px, 9999px, 107px, 0);
+                }
+                75% {
+                    clip: rect(25px, 9999px, 69px, 0);
+                }
+                79.16666666666666% {
+                    clip: rect(28px, 9999px, 104px, 0);
+                }
+                83.33333333333334% {
+                    clip: rect(33px, 9999px, 38px, 0);
+                }
+                87.5% {
+                    clip: rect(124px, 9999px, 24px, 0);
+                }
+                91.66666666666666% {
+                    clip: rect(103px, 9999px, 64px, 0);
+                }
+                95.83333333333334% {
+                    clip: rect(62px, 9999px, 80px, 0);
+                }
+                100% {
+                    clip: rect(13px, 9999px, 30px, 0);
+                }
+            }
+            @-webkit-keyframes glitch-anim-2 {
+                6.666666666666667% {
+                    clip: rect(85px, 9999px, 36px, 0);
+                }
+                10% {
+                    clip: rect(28px, 9999px, 29px, 0);
+                }
+                13.333333333333334% {
+                    clip: rect(128px, 9999px, 27px, 0);
+                }
+                16.666666666666664% {
+                    clip: rect(24px, 9999px, 72px, 0);
+                }
+                20% {
+                    clip: rect(42px, 9999px, 34px, 0);
+                }
+                23.333333333333332% {
+                    clip: rect(4px, 9999px, 100px, 0);
+                }
+                26.666666666666668% {
+                    clip: rect(86px, 9999px, 138px, 0);
+                }
+                30% {
+                    clip: rect(3px, 9999px, 77px, 0);
+                }
+                33.33333333333333% {
+                    clip: rect(12px, 9999px, 13px, 0);
+                }
+                36.666666666666664% {
+                    clip: rect(93px, 9999px, 150px, 0);
+                }
+                40% {
+                    clip: rect(7px, 9999px, 99px, 0);
+                }
+                43.333333333333336% {
+                    clip: rect(89px, 9999px, 80px, 0);
+                }
+                46.666666666666664% {
+                    clip: rect(68px, 9999px, 31px, 0);
+                }
+                50% {
+                    clip: rect(45px, 9999px, 110px, 0);
+                }
+                53.333333333333336% {
+                    clip: rect(27px, 9999px, 68px, 0);
+                }
+                56.666666666666664% {
+                    clip: rect(145px, 9999px, 1px, 0);
+                }
+                60% {
+                    clip: rect(65px, 9999px, 26px, 0);
+                }
+                63.33333333333333% {
+                    clip: rect(103px, 9999px, 17px, 0);
+                }
+                66.66666666666666% {
+                    clip: rect(131px, 9999px, 89px, 0);
+                }
+                70% {
+                    clip: rect(40px, 9999px, 78px, 0);
+                }
+                73.33333333333333% {
+                    clip: rect(33px, 9999px, 13px, 0);
+                }
+                76.66666666666667% {
+                    clip: rect(89px, 9999px, 147px, 0);
+                }
+                80% {
+                    clip: rect(12px, 9999px, 49px, 0);
+                }
+                83.33333333333334% {
+                    clip: rect(60px, 9999px, 132px, 0);
+                }
+                86.66666666666667% {
+                    clip: rect(142px, 9999px, 29px, 0);
+                }
+                90% {
+                    clip: rect(3px, 9999px, 147px, 0);
+                }
+                93.33333333333333% {
+                    clip: rect(76px, 9999px, 38px, 0);
+                }
+                96.66666666666667% {
+                    clip: rect(43px, 9999px, 88px, 0);
+                }
+                100% {
+                    clip: rect(40px, 9999px, 24px, 0);
+                }
+            }
+            @keyframes glitch-anim-2 {
+                6.666666666666667% {
+                    clip: rect(85px, 9999px, 36px, 0);
+                }
+                10% {
+                    clip: rect(28px, 9999px, 29px, 0);
+                }
+                13.333333333333334% {
+                    clip: rect(128px, 9999px, 27px, 0);
+                }
+                16.666666666666664% {
+                    clip: rect(24px, 9999px, 72px, 0);
+                }
+                20% {
+                    clip: rect(42px, 9999px, 34px, 0);
+                }
+                23.333333333333332% {
+                    clip: rect(4px, 9999px, 100px, 0);
+                }
+                26.666666666666668% {
+                    clip: rect(86px, 9999px, 138px, 0);
+                }
+                30% {
+                    clip: rect(3px, 9999px, 77px, 0);
+                }
+                33.33333333333333% {
+                    clip: rect(12px, 9999px, 13px, 0);
+                }
+                36.666666666666664% {
+                    clip: rect(93px, 9999px, 150px, 0);
+                }
+                40% {
+                    clip: rect(7px, 9999px, 99px, 0);
+                }
+                43.333333333333336% {
+                    clip: rect(89px, 9999px, 80px, 0);
+                }
+                46.666666666666664% {
+                    clip: rect(68px, 9999px, 31px, 0);
+                }
+                50% {
+                    clip: rect(45px, 9999px, 110px, 0);
+                }
+                53.333333333333336% {
+                    clip: rect(27px, 9999px, 68px, 0);
+                }
+                56.666666666666664% {
+                    clip: rect(145px, 9999px, 1px, 0);
+                }
+                60% {
+                    clip: rect(65px, 9999px, 26px, 0);
+                }
+                63.33333333333333% {
+                    clip: rect(103px, 9999px, 17px, 0);
+                }
+                66.66666666666666% {
+                    clip: rect(131px, 9999px, 89px, 0);
+                }
+                70% {
+                    clip: rect(40px, 9999px, 78px, 0);
+                }
+                73.33333333333333% {
+                    clip: rect(33px, 9999px, 13px, 0);
+                }
+                76.66666666666667% {
+                    clip: rect(89px, 9999px, 147px, 0);
+                }
+                80% {
+                    clip: rect(12px, 9999px, 49px, 0);
+                }
+                83.33333333333334% {
+                    clip: rect(60px, 9999px, 132px, 0);
+                }
+                86.66666666666667% {
+                    clip: rect(142px, 9999px, 29px, 0);
+                }
+                90% {
+                    clip: rect(3px, 9999px, 147px, 0);
+                }
+                93.33333333333333% {
+                    clip: rect(76px, 9999px, 38px, 0);
+                }
+                96.66666666666667% {
+                    clip: rect(43px, 9999px, 88px, 0);
+                }
+                100% {
+                    clip: rect(40px, 9999px, 24px, 0);
+                }
+            }
+            .scroll_ani span {
+                position: absolute;
+                bottom: 100px;
+                left: 50%;
+                width: 24px;
+                height: 24px;
+                margin-left: -12px;
+                border-left: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-animation: scroll_ani 1.5s infinite;
+                animation: scroll_ani 1.5s infinite;
+                box-sizing: border-box;
+            }
+            @-webkit-keyframes scroll_ani {
+                0% {
+                    -webkit-transform: rotate(-45deg) translate(0, 0);
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+                    opacity: 0;
+                }
+            }
+            @keyframes scroll_ani {
+                0% {
+                    transform: rotate(-45deg) translate(0, 0);
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: rotate(-45deg) translate(-20px, 20px);
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loading">
+            <p>&gt; nice to meet YU!<span>|</span></p>
+        </div>
+        <!-- <div class="cursor"></div> -->
+        <div class="wrap">
+            <header>
+                <div class="header-wrap">
+                    <h1 class="logo">
+                        <a class="logo_img_container" href="index.html"> <img src="images/yr-logo-white.png" alt="" /> </a>
+                    </h1>
+                    <a href="#none" id="btn-open" class="btn btn-gnb pos">
+                        <span class="small_menu_btn_line_wrap">
+                            <span class="small_menu_btn_line small_menu_btn_line_01"></span>
+                            <span class="small_menu_btn_line small_menu_btn_line_02"></span>
+                            <span class="small_menu_btn_line small_menu_btn_line_03"></span>
+                        </span>
+                    </a>
+                    <div id="gnb">
+                        <nav>
+                            <ul>
+                                <li class="bottom2top-wrap"><a data-target="1" lang="en" class="nav-control bottom2top" href="#none">I am</a></li>
+                                <li class="bottom2top-wrap"><a data-target="2" lang="en" class="nav-control bottom2top" href="#none">Chae yu ri</a></li>
+                                <li class="bottom2top-wrap"><a data-target="3" lang="en" class="nav-control bottom2top" href="#none">-Portfolio1</a></li>
+                                <li class="bottom2top-wrap"><a data-target="4" lang="en" class="nav-control bottom2top" href="#none">-Portfolio2</a></li>
+                                <li class="bottom2top-wrap"><a data-target="5" lang="en" class="nav-control bottom2top" href="#none">-Portfolio3</a></li>
+                                <li class="bottom2top-wrap"><a data-target="6" lang="en" class="nav-control bottom2top" href="#none">-Portfolio4</a></li>
+                                <li class="bottom2top-wrap"><a data-target="7" lang="en" class="nav-control bottom2top" href="#none">With me!</a></li>
+                                <li class="bottom2top-wrap"><a lang="en" class="bottom2top" href="mailto:usl_designer@naver.com">usl_designer@naver.com</a></li>
+                            </ul>
+                        </nav>
+                        <div class="btn bottom2top-wrap">
+                            <a href="#none" id="btn-close" class="btn-gnb close bottom2top"></a>
+                        </div>
+                    </div>
+                    <div class="nav-panel">
+                        <!-- <div class="scroll-btn up"></div>
+                      <div class="scroll-btn down"></div> -->
+                        <div>
+                            <ul>
+                                <li data-target="1" class="nav-control nav-btn nav-page1 active"></li>
+                                <li data-target="2" class="nav-control nav-btn nav-page2"></li>
+                                <li data-target="3" class="nav-control nav-btn nav-page3"></li>
+                                <li data-target="4" class="nav-control nav-btn nav-page4"></li>
+                                <li data-target="5" class="nav-control nav-btn nav-page5"></li>
+                                <li data-target="6" class="nav-control nav-btn nav-page6"></li>
+                                <li data-target="7" class="nav-control nav-btn nav-page7"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="wrapper active-page1">
+                    <div id="page-1" class="page page1">
+                        <div class="glitch-wrapper">
+                            <div class="glitch">CHAE YU RI</div>
+                        </div>
+                        <a data-target="2" href="#none" class="nav-control scroll_ani"><span></span></a>
+                    </div>
+                    <div id="page-2" class="page page2">
+                        <div class="wrap">
+                            <div class="main_value_header">
+                                <h2 lang="ko" class="main_value_title">
+                                    안녕하세요!<br />함께하고싶은 파트너<br />
+                                    <mark>채유리</mark>입니다.
+                                </h2>
+                            </div>
+                            <ul class="main_value_list">
+                                <li>
+                                    <h3 lang="en">Co-work</h3>
+                                    <p>
+                                        <strong lang="ko">커뮤니케이션 및 협업 능력</strong><span lang="ko">더 나은 방향을 위한 토론을 좋아하며,<br />유지보수가 쉽고 가독성이 좋은 코드를 사용</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3 lang="en">Markup</h3>
+                                    <p><strong lang="ko">웹접근성과 웹표준을 준수한 시멘틱 마크업</strong><span lang="ko">HTML5/CSS3/SCSS/JS/jquery/Bootstrap4 활용</span></p>
+                                </li>
+                                <li>
+                                    <h3 lang="en">Skills</h3>
+                                    <p>
+                                        <strong lang="ko">MacOs Terminal 및 다양한 그래픽툴 사용 가능</strong
+                                        ><span lang="ko"
+                                            >Photoshop/Zeplin/XD/Figma/Illustrator/Premiere/AE/C4D<br />
+                                            인터랙티브한 웹을 구현할 아이디어를 시각화</span
+                                        >
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="page-3" class="page page3">
+                        <div class="wrap">
+                            <h2 class="title" lang="en">Seoul Fashion Week</h2>
+                            <ul class="status ty2">
+                                <li><strong>type</strong><span>반응형</span></li>
+                                <li>
+                                    <strong>project</strong><span>기획+디자인+퍼블리싱<br />(100%)</span>
+                                </li>
+                                <li><strong>point</strong>검색엔진최적화(SEO)<br />KAKAO API 연동</li>
+                            </ul>
+                            <div class="btn-box">
+                                <a href="https://yurichae.github.io/SFW/" target="_blank">MAIN PAGE</a>
+                                <!-- <a href="http://yrcj.dothome.co.kr/login_index.html">LOGIN PAGE</a>
+                                <a href="http://yrcj.dothome.co.kr/sub_index.html">SUB PAGE</a> -->
+                                <a href="https://github.com/yurichae/SFW" target="_blank">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="page-4" class="page page4">
+                        <div class="wrap">
+                            <h2 class="title" lang="en">Ildong Foodis</h2>
+                            <ul class="status ty2">
+                                <li><strong>type</strong><span>반응형</span></li>
+                                <li><strong>project</strong><span>퍼블리싱(100%)</span></li>
+                                <li><strong>point</strong>스크롤애니메이션</li>
+                            </ul>
+                            <div class="btn-box">
+                                <a href="http://yuripof1.dothome.co.kr/" target="_blank">MAIN PAGE</a>
+                                <a href="http://yuripof1.dothome.co.kr/introduce-overview.html" target="_blank">SUB PAGE 1</a>
+                                <a href="http://yuripof1.dothome.co.kr/introduce-ceo.html" target="_blank">SUB PAGE 2</a>
+                                <a href="http://yuripof1.dothome.co.kr/introduce-vision.html" target="_blank">SUB PAGE 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="page-5" class="page page5">
+                        <div class="wrap">
+                            <h2 class="title" lang="en">ILOOM</h2>
+                            <ul class="status">
+                                <li><strong>type</strong><span>반응형</span></li>
+                                <li>
+                                    <strong>project</strong><span>기획+디자인+퍼블리싱<br />(100%)</span>
+                                </li>
+                                <li>
+                                    <strong>point</strong><span>모달 검색창<br />Vanila JS 슬라이더</span>
+                                </li>
+                            </ul>
+                            <div class="btn-box">
+                                <a href="http://yuripof2.dothome.co.kr/" target="_blank">MAIN PAGE</a>
+                                <a href="http://yuripof2.dothome.co.kr/sub_index.html" target="_blank">LOGIN PAGE</a>
+                                <a href="http://yuripof2.dothome.co.kr/perchase_page.html" target="_blank">SUB PAGE</a>
+                                <a href="iloom_chaeyuri_기획서.pdf" target="_blank">PROPOSAL</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="page-6" class="page page6">
+                        <div class="wrap">
+                            <h2 class="title" lang="en"><span>CAFE24</span>LABO H<br />두피컨설팅시스템</h2>
+                            <ul class="status">
+                                <li><strong>type</strong><span>적응형</span></li>
+                                <li>
+                                    <strong>project</strong><span>마크업(100%)<br />스크립트(85%)</span>
+                                </li>
+                                <li>
+                                    <strong>point</strong><span>테스트 결과구현 로직<br />AJAX 데이터전송</span>
+                                </li>
+                            </ul>
+                            <div class="btn-box">
+                                <a href="https://laboh.co.kr/check/survey.html" target="_blank">PC</a>
+                                <a href="https://m.laboh.co.kr/check/" target="_blank">Mobile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="page-7" class="con04 page page7">
+                        <div class="marquee">
+                            <h2 lang="ko">꾸준히 공부하고 있어요!</h2>
+                        </div>
+                        <div class="wrap">
+                            <div class="con-item">
+                                <div class="con-item__block">
+                                    <div class="prevImg ty1">
+                                        <div class="overlay"></div>
+                                    </div>
+                                    <div class="innerBox" lang="ko">[Vue.js/Bootstrap] 헤더+게시판</div>
+                                    <div class="btnBox">
+                                        <a href="https://vueboard-200af.web.app/" target="_blank"><span>GO SITE</span></a>
+                                        <a href="https://github.com/yurichae/Vueboard/tree/master" target="_blank"><span>GitHub</span></a>
+                                    </div>
+                                </div>
+                                <div class="con-item__block">
+                                    <div class="prevImg ty2">
+                                        <div class="overlay"></div>
+                                    </div>
+                                    <div class="innerBox" lang="ko">[Canvas/Vanila Js] 그림판</div>
+                                    <div class="btnBox">
+                                        <a href="https://yuripainting.netlify.app/" target="_blank"><span>GO SITE</span></a>
+                                        <a href="https://github.com/yurichae/paintJs" target="_blank"><span>GitHub</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="resume" href="cyr_resume.pdf" target="_blank" lang="ko">이력서 (OPEN)</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- Plugins -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/pagescroll.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
